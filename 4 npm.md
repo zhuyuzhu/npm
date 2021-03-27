@@ -107,7 +107,9 @@ npm insatll --权限 包名
 
 
 
-### npm run ‘script’标签内容（package.json中“script”)
+### npm查找包的理解 
+
+#### npm run ‘script’标签内容（package.json中“script”)
 
 ```json
   "scripts": {
@@ -120,9 +122,19 @@ npm insatll --权限 包名
 
 注意：`&&`可以拼接多个命令
 
+#### webpack中
 
+在每个项目中，会依次往文件外层查找包依赖，默认查找每个包依赖中的index.js。如果没有的话 。。。
+
+直接在项目控制台中输入`webpack`命令，webpack默认会在全局中查找，所以要把该命令 配置到package.json的script中，这样就会 先从该项目依赖中查找。
+
+ 
 
 #### nmp相关命令：
+
+npm install -d 就是 npm install --save-dev 安装到开发环境 例如 gulp ，babel，webpack 一般都是辅助工具
+
+npm insatll -s 就是npm install --save  安装到生产环境 如 vue ,react 等
 
 ```shell
 npm --version  查看npm版本
@@ -134,6 +146,13 @@ npm uninstall --save 包名：卸载某个生产依赖包
 
 npm --help 查看帮助
 npm 命令（比如install）--help 查看命令（比如install）的帮助信息
+
+全局下载
+npm install webpack --global 或者 npm install -g webpack
+开发依赖
+npm install webpack --save
+生产依赖
+npm install webpack --save-dev
 
 ```
 
@@ -166,6 +185,10 @@ npm config set registry https://registry.npm.taobao.org
 ```shell
 npm config list
 ```
+
+
+
+
 
 ### 如何切换`npm`命令的仓库源呢？——nrm
 
