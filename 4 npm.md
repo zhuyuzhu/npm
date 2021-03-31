@@ -12,6 +12,12 @@ npm菜鸟教程：https://www.runoob.com/nodejs/nodejs-npm.html
 
 根据package.json和package-lock.json来下载对应的依赖包到`node_modules`文件夹中 
 
+### 全局安装的依赖包
+
+地址：C:\Users\Andminster\AppData\Roaming\npm
+
+
+
 #### 了解package.json
 
 全局安装：安装到node全局中，可以在本地的任何位置使用的包
